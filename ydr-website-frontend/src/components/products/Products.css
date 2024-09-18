@@ -1,0 +1,128 @@
+.productsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.productsWrapper h1 {
+  font-size: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: italic;
+  font-weight: 800;
+}
+.productsWrapper hr {
+  height: 3px;
+  width: 200px;
+  border: none;
+  background: linear-gradient(
+    45deg,
+    rgb(3, 111, 253),
+    rgb(192, 215, 245),
+    rgb(3, 111, 253)
+  );
+  margin-bottom: 30px;
+}
+.mainProducts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  padding: 20px;
+}
+.individualProduct {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  border: 1px solid rgb(68, 251, 190);
+  border-top-right-radius: 40px;
+  max-width: 76%;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+
+}
+.individualProduct img {
+  height: 350px;
+  border-top-right-radius: 40px;
+}
+.nameAndDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nameAndDescription h2 {
+  font-size: 28px;
+  color: #3f3e3e;
+}
+.nameAndDescription p {
+  font-size: 16px;
+}
+.cartAndPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.individualProductPrice {
+  display: flex;
+  gap: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.oldPrice {
+  text-decoration: line-through;
+  color: red;
+}
+.newPrice {
+  color: #2a2a2a;
+}
+.addToCartButton {
+  padding: 2px;
+  font-size: 16px;
+  color: rgb(70, 70, 70);
+  font-weight: 550;
+  width: 150px;
+  height: 50px;
+    background: linear-gradient(
+    45deg,
+    rgb(165, 248, 248),
+    rgb(233, 249, 249),rgb(165, 248, 248)
+  );
+  outline: none;
+    border: none;
+    cursor: pointer;
+}
+.addRemoveButton{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 20px;
+  bottom: 40%;
+  left: 58%;
+  padding: 6px;
+}
+.addRemoveButton img{
+  height: auto;
+  width: 30px;
+  overflow: visible;
+}
+.addButton{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  /* background-color: white; */
+  border-radius: 50%;
+  bottom: 43%;
+  left: 80%;
+}
+.addButton img{
+  height: auto;
+  width: 47px;
+  overflow: visible;
+}

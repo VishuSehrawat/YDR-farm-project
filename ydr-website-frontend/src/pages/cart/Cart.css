@@ -1,0 +1,211 @@
+.outerCart {
+  height: 90vh;
+  background-image: url("../../assets/cartBG2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart {
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 60px 30px;
+  margin-top: 10px;
+  /* border: 1px solid aquamarine; */
+  gap: 30px;
+  align-items: top;
+  justify-content: center;
+  width: 85vw;
+  height: 70vh;
+}
+.cart hr {
+  width: 1.5px;
+  background-color: #a09d9d;
+  outline: none;
+  border: none;
+}
+.leftCart h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #353535;
+}
+.leftCart hr {
+  width: 100%;
+  height: 2px;
+  background-color: #7d7b7b;
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+}
+.leftCart {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+}
+.cartTitles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 20px;
+  padding-top: 0;
+  padding-left: 0;
+  align-items: center;
+  justify-content: center;
+}
+.cartTitles p {
+  /* text-align: center; */
+  font-size: 21px;
+  font-weight: 600;
+}
+.cartTitles p:first-child {
+  width: 70%;
+}
+/* .cartTitles p:nth-last-child(n-2){
+    width: 80%;
+} */
+/* .cartTitles p:nth-child(3){
+    width: 100%;
+} */
+.cartContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cartContent hr {
+  margin-bottom: 0;
+}
+.individualContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+.individualContent p {
+  text-align: center;
+  color: #353535;
+}
+.individualContent p:nth-child(1) {
+  font-size: 18px;
+  font-weight: 700;
+}
+/* selects all p except 1st, (n+2) suggests n starts at 2 */
+.individualContent p:nth-child(n + 2) {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4f4e4e;
+}
+/* .individualContent p:nth-child(n+3){
+    width: 80%;
+    text-align: end;
+} */
+
+.cartTitles p:nth-child(2) {
+  text-align: start;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description p {
+  text-align: start;
+}
+.individualContent img {
+  width: 80px;
+  margin: 0 auto;
+}
+.rightCart {
+  /* background-color: brown; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+/* .rightCart:last-child{
+    align-items: center;
+} */
+.actionDiv {
+  display: flex;
+  width: 60%;
+  justify-self: center;
+  object-fit: contain;
+  justify-content: center;
+  align-items: center;
+}
+.crossIcon,
+.removeIcon,
+.addIcon {
+  width: auto;
+  height: 20px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.removeIcon,
+.addIcon {
+  height: 24px;
+}
+.rightCart h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #353535;
+}
+.cartTotals {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 20px;
+  border: 1px solid #353535;
+  border-radius: 30px;
+  border-left: none;
+  border-right: none;
+  padding: 20px 30px;
+}
+
+.subtotalRow,
+.deliveryRow,
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.subtotalRow {
+  padding-top: 20px;
+}
+.totalRow {
+  padding-bottom: 20px;
+}
+.checkoutButton {
+  padding: 20px;
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 40px;
+  border: 1px solid #7d7b7b;
+  color: #251e1e;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    rgb(35, 82, 49),
+    rgb(204, 249, 227),
+    rgb(35, 82, 49)
+  );
+  
+  
+}
+
+ 

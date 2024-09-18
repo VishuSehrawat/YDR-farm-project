@@ -1,0 +1,40 @@
+.carouselMain {
+  display: flex;
+  gap: 33px;
+  justify-content: center;
+  position: relative;
+  height: 80vh;
+  width: 100vw;
+  margin-left: 13px;
+}
+.carousel1,
+.carousel2,
+.carousel3 {
+  width: 80vh;
+  overflow: hidden;
+}
+
+.carousel2 img {
+  transform: translate(-620px);
+}
+.carousel3 img {
+  transform: translate(-1220px);
+}
+.carouselText {
+  position: absolute;
+  top: 35%;
+  display: flex;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  backface-visibility: 50%;
+  color: black;
+  font-size: 70px;
+  font-weight: 500;
+  width: 45vw;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.carouselText span {
+  color: rgb(3, 111, 253);
+  font-weight: 700;
+}

@@ -1,0 +1,54 @@
+.moringaBlogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 50px;
+}
+.moringaBlogs > h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #373737;
+}
+.allBlogs {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: space-between;
+  gap: 50px;
+  height: 300px;
+  width: 80%;
+  /* background-color: red; */
+  margin-top: 20px;
+  border-top: 1px solid rgb(0, 255, 170);
+  border-bottom: 1px solid rgb(0, 255, 170);
+  border-top-right-radius: 60px;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+.allBlogs > img {
+  align-self: flex-end;
+  place-self: center;
+}
+.allBlogs img {
+  height: 30px;
+}
+.blogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.blogContent h1{
+    color: rgb(4, 164, 156);
+    font-weight: 700;
+    font-size: 35px;
+}
+.blogContent p {
+  text-align: center;
+}
+.leftArrow {
+  transform: rotate(-180deg);
+}
