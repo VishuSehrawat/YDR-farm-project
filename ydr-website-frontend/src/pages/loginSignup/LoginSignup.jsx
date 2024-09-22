@@ -1,26 +1,59 @@
-import React, { useState } from "react";
+import React, { useState,useContext} from "react";
 import "./LoginSignUp.css";
+import {StoreContextApi} from '../../context/StoreContext.jsx'
+import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 
 const LoginSignup = ({ setShowLogin }) => {
-    const [currState, setCurrState] = useState("Sign Up");
-    
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password:''
-    })
+  const [currState, setCurrState] = useState("Sign Up");
+  const { backendUrl, setToken } = useContext(StoreContextApi);
 
-    const onChange = (e) => {
-        const name = e.target.name
-        const value = e.target.value
-        
-        setFormData({...formData,[name]:value})
+  const navigate = useNavigate()
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const onLogin = async (e) => {
+    e.preventDefault()
+
+    let newUrl = backendUrl
+
+    if (currState === 'Sign Up') {
+      newUrl += '/api/user/register'
+      console.log(newUrl)
+
     }
+    else {
+      newUrl += '/api/user/login'
+      console.log(newUrl)
+    }
+
+    const response = await axios.post(newUrl,formData)
+
+    console.log(response)
+    if(response.data.success){
+      setToken(response.data.token)
+      localStorage.setItem('token', response.data.token)
+      setShowLogin(false)
+      navigate('/')
+    }
+    
+  }
+
+  const onChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
     <div className="mainLoginSignup">
       <h1>{currState}</h1>
-      <form className="loginSignUpForm">
+      <form onSubmit={onLogin} className="loginSignUpForm">
         {currState === "Sign Up" ? (
           <input
             type="text"
@@ -46,7 +79,9 @@ const LoginSignup = ({ setShowLogin }) => {
           onChange={(e) => onChange(e)}
           placeholder="Password"
         />
-        <button className="formSubmitButton">{currState === "Sign Up" ? "Sign Up" : "Login"}</button>
+        <button className="formSubmitButton">
+          {currState === "Sign Up" ? "Sign Up" : "Login"}
+        </button>
 
         {currState === "Sign Up" ? (
           <div className="switchForm">

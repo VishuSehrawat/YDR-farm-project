@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import "./Cart.css";
-import { StoreContextApi } from "../../components/context/StoreContext";
+import { StoreContextApi } from "../../context/StoreContext";
 import crossIcon from "../../assets/crossIcon.png";
 import removeIcon from "../../assets/removeIcon.png";
 import add_icon_white from "../../assets/add_icon_white.png";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const {
@@ -13,7 +14,10 @@ const Cart = () => {
     addToCart,
     getTotalCartAmount,
     getTotalDelivery,
+     backendUrl
   } = useContext(StoreContextApi);
+
+  const navigate = useNavigate()
 
   return (
     <div className="outerCart">
@@ -77,20 +81,18 @@ const Cart = () => {
               <p>Subtotal</p>
               <p>₹ {getTotalCartAmount()}</p>
             </div>
-            <hr />
+            
             <div className="deliveryRow">
               <p>Shipping</p>
               <p>₹ {getTotalDelivery()}</p>
             </div>
-              <hr />
+            
             <div className="totalRow">
               <p>Total</p>
               <p>₹ {getTotalCartAmount() + getTotalDelivery()}</p>
             </div>
           </div>
-          <button className="checkoutButton">
-            Proceed To Checkout
-          </button>
+          <button onClick={()=>navigate('/orders')} className="checkoutButton">Proceed To Checkout</button>
         </div>
       </div>
     </div>

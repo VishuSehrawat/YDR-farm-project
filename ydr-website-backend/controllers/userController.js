@@ -9,6 +9,17 @@ const createToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_KEY);
 };
 
+const getUserProfile = async (req, res) => {
+  try {
+    let userData = await userModel.findById(req.body.userId)
+    let userName = await userData.name
+    res.json({success:true,userName})
+  } catch (error) {
+    console.log(error)
+    res.json({success:false,message:'error'})
+  }
+}
+
 const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
 //   console.log(name, email, password);
@@ -90,4 +101,4 @@ const loginUser = async (req, res) => {
 
 };
 
-module.exports = { loginUser, registerUser };
+module.exports = { loginUser, registerUser,getUserProfile };

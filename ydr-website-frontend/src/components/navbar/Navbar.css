@@ -26,7 +26,7 @@
   font-weight: 500;
   cursor: pointer;
 }
-.navLinks a{
+.navLinks a {
   list-style: none;
   text-decoration: none;
 }
@@ -36,7 +36,7 @@
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
 }
-.navLinks li:hover .toAnimate{
+.navLinks li:hover .toAnimate {
   display: block;
   color: red;
   transform: translateY(-10px);
@@ -49,8 +49,47 @@
   display: flex;
   gap: 30px;
   padding-top: 20px;
+  align-items:  start;
 }
 
 .navRight img {
   height: 30px;
+}
+
+.navRight .cartIcon{
+  position: relative;
+}
+
+.navRight .dot{
+  position: absolute;
+  background-color: tomato;
+  height: 8px;
+  width: 8px;
+  bottom: 32px;
+  right: -6px;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.profileAndLogout{
+  display: flex;
+  /* gap: 20px; */
+}
+
+.logoutButton{
+   width: 60%;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+  background: linear-gradient(
+    45deg,
+    rgb(35, 82, 49),
+    rgb(204, 249, 227),
+    rgb(35, 82, 49)
+  );
+  color: #313030;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
 }

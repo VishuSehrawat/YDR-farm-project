@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./Blogs.css";
-import { StoreContextApi } from "../context/StoreContext";
+import { StoreContextApi } from "../../context/StoreContext";
 import rightArrow from "../../assets/rightArrow.png";
 
 const Blogs = () => {

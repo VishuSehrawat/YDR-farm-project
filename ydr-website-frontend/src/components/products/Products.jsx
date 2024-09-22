@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Products.css";
-import { StoreContextApi } from "../context/StoreContext";
+import { StoreContextApi } from "../../context/StoreContext";
 import addIcon from "../../assets/addIcon.png";
 import removeIcon from "../../assets/removeIcon.png";
 import add_icon_white from "../../assets/add_icon_white.png";

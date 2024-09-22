@@ -8,21 +8,25 @@
   justify-content: center;
 }
 .cart {
+  position: relative;
   background-color: white;
   z-index: 1;
   display: flex;
   justify-content: space-between;
   padding: 50px 60px 30px;
-  margin-top: 10px;
+ margin-top: 10px;
   /* border: 1px solid aquamarine; */
   gap: 30px;
   align-items: top;
   justify-content: center;
   width: 85vw;
   height: 70vh;
+  overflow: scroll;
 }
 .cart hr {
+  /* position: absolute; */
   width: 1.5px;
+  height: 100vh;
   background-color: #a09d9d;
   outline: none;
   border: none;
