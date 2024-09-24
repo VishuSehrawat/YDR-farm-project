@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Orders.css";
 import OrderSummary from "../../components/orderSummary/OrderSummary";
 import Address from "../../components/address/Address";
 import { StoreContextApi } from "../../context/StoreContext";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom'
 
 const Orders = () => {
   const {moringaProducts,cartItems,getTotalCartAmount,backendUrl,token}=useContext(StoreContextApi)
@@ -50,6 +51,16 @@ const Orders = () => {
     }
 
   };
+
+  const navigate = useNavigate()
+  
+  useEffect(() => {
+    if (!token) {
+      navigate('/cart')
+    } else if(getTotalCartAmount() === 0) {
+      navigate('/cart')
+    }
+  },[token])
   return (
     <>
       <div>Orders</div>

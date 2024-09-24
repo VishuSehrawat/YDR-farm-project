@@ -9,6 +9,8 @@ import Profile from "./pages/profile/Profile";
 import Products from "./components/products/Products";
 import { StoreContextApi } from "./context/StoreContext";
 import Orders from "./pages/orders/Orders";
+import VerifyOrder from "./pages/verifyOrder/VerifyOrder";
+import MyOrders from "./pages/myOrders/MyOrders";
 
 function App() {
   const [showLogin, setShowLogin] = useState(true);
@@ -33,6 +35,8 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/verifyOrder" element={<VerifyOrder />} />
+        <Route path="/myOrders" element={<MyOrders />} />
       </Routes>
       <Footer />
     </>
