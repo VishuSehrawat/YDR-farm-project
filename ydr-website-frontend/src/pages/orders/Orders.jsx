@@ -63,9 +63,8 @@ const Orders = () => {
   },[token])
   return (
     <>
-      <div>Orders</div>
       {currPage === "address" ? (
-        <div className="address">
+        <div className="addressWrapper">
           <Address data={data} setData={setData} setCurrPage={setCurrPage} />
         </div>
       ) : (

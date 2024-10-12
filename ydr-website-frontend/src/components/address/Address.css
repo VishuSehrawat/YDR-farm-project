@@ -1,0 +1,100 @@
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.addressMain {
+  display: flex;
+  justify-content: center; /* Center the form */
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addressMain form {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Two columns in a row */
+  gap: 20px; /* Space between grid items */
+  width: 100%; /* Full width */
+}
+
+.addressMain button {
+  width: 30%; /* Button width */
+}
+
+/* Form element styles */
+.addressFormElement {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styles */
+.addressFormElement label {
+  font-weight: bold; /* Bold labels */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+/* Input styles */
+.addressFormElement input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px; /* Inner padding */
+  font-size: 16px; /* Font size */
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: rgb(60, 179, 113); /* New button color (greenish) */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px; /* Space above button */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: rgb(50, 150, 95); /* Darker shade on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .addressMain form {
+    width: 80%; /* Adjust form width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .addressMain form {
+    width: 90%; /* Adjust form width for smaller screens */
+  }
+
+  .addressFormElement {
+    margin-bottom: 15px; /* Reduce margin for smaller screens */
+  }
+
+  button {
+    font-size: 14px; /* Smaller font size for button */
+  }
+}
+
+@media (max-width: 480px) {
+  .addressMain form {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .addressFormElement input {
+    height: 35px; /* Slightly reduce height for mobile */
+  }
+
+  button {
+    padding: 8px 16px; /* Adjust padding for button */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+}

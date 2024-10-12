@@ -53,41 +53,38 @@ const placeOrder = async (req, res) => {
 };
 
 const verifyOrder = async (req, res) => {
-  const { success, sessionId } = req.body
-  console.log(success, sessionId)
-  
+  const { success, sessionId } = req.body;
+  console.log(success, sessionId);
+
   try {
-    if (success==="true") {
-      await userModel.findByIdAndUpdate(sessionId, { payment: true })
-      
-      res.json({success:true,message:"paid"})
+    if (success === "true") {
+      await userModel.findByIdAndUpdate(sessionId, { payment: true });
+
+      res.json({ success: true, message: "paid" });
     } else {
-      await orderModel.findByIdAndDelete(sessionId)
+      await orderModel.findByIdAndDelete(sessionId);
 
-      res.json({success:false,message:'notPaid'})
-    } 
+      res.json({ success: false, message: "notPaid" });
+    }
   } catch (error) {
-    console.log(error)
-    res.json({success:false,message:`Error-> ${error}`})
+    console.log(error);
+    res.json({ success: false, message: `Error-> ${error}` });
   }
-
-  
 };
 
 const findUserOrders = async (req, res) => {
- 
-
   try {
-    const orders = await orderModel.find({ userId: req.body.userId })
-    console.log('orders found',orders)
-    res.json({success:true,userOrders:orders})
-    
+    const orders = await orderModel.find({ userId: req.body.userId });
+    console.log("orders found", orders);
+    res.json({ success: true, userOrders: orders });
   } catch (error) {
-    console.log(error)
-    res.json({success:false,message:`error-> ${error}`})
+    console.log(error);
+    res.json({ success: false, message: `error-> ${error}` });
   }
-}
+};
 
 module.exports = {
-  placeOrder, verifyOrder, findUserOrders
+  placeOrder,
+  verifyOrder,
+  findUserOrders,
 };

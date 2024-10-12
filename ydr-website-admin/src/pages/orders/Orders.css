@@ -1,0 +1,99 @@
+.order {
+  width: 80%; /* Full width with margin */
+  margin: 0 auto; /* Center the orders section */
+  padding: 0 20px; /* Padding around the section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background: linear-gradient(
+    135deg,
+    #f9f9f9,
+    #e0e6ed
+  ); /* Soft gradient background */
+}
+
+h3 {
+  text-align: center; /* Centered heading */
+  color: #333; /* Dark color for the heading */
+  font-size: 28px; /* Font size for heading */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+.order-list {
+  display: flex; /* Flexbox for order items */
+  flex-direction: column; /* Column layout */
+  gap: 15px; /* Space between orders */
+}
+
+.order-item {
+  display: grid; /* Grid layout for each order */
+  grid-template-columns: 70px 1fr 100px 100px; /* Adjust column sizes */
+  align-items: center; /* Center items vertically */
+  padding: 015px; /* Padding for order item */
+  border: 1px solid #ddd; /* Light border for items */
+  border-radius: 8px; /* Rounded corners for items */
+  background-color: #fff; /* White background for items */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.order-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+.order-item img {
+  max-width: 50px; /* Limit image size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+.order-item-food {
+  font-weight: bold; /* Bold font for food items */
+  color: #555; /* Darker color for text */
+}
+
+.order-item-name {
+  font-size: 16px; /* Font size for name */
+  color: #333; /* Dark color */
+}
+
+.order-item-address {
+  font-size: 14px; /* Smaller font size for address */
+  color: #777; /* Lighter color for address */
+}
+
+.order-item-phone {
+  font-size: 14px; /* Font size for phone number */
+  color: #777; /* Lighter color for phone */
+}
+
+.order-item p {
+  margin: 0; /* Remove default margin */
+}
+
+select {
+  padding: 8px; /* Padding for dropdown */
+  width: 150px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f5f5f5; /* Light background */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+select:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .order {
+    width: 95%; /* Wider on smaller screens */
+  }
+
+  .order-item {
+    grid-template-columns: 1fr; /* Change layout for smaller screens */
+    text-align: center; /* Center align text */
+  }
+
+  .order-item img {
+    margin: 0 auto; /* Center image */
+  }
+}

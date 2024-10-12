@@ -1,0 +1,118 @@
+.list {
+  width: 80%; /* Full width with margin */
+  margin: 0 auto; /* Center the list with margin on top and bottom */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background: linear-gradient(135deg, #f0f4f8, #e0e6ed); /* Soft gradient background */
+  padding: 0 20px; /* Padding around the list */
+}
+
+h1 {
+  text-align: center; /* Centered heading */
+  color: #333; /* Dark color for the heading */
+  font-size: 24px; /* Font size for heading */
+}
+
+.listItemsHeader {
+  display: grid; /* Use grid layout for headers */
+  grid-template-columns: 1fr 2fr 2fr 1fr 1fr; /* Responsive column layout */
+  padding: 10px; /* Padding for headers */
+  background-color: #a7c6d1; /* Header background color */
+  color: #fff; /* White text for contrast */
+  border-radius: 8px; /* Rounded corners for header */
+  margin-bottom: 10px; /* Space below the header */
+  font-weight: bold; /* Bold font for headers */
+  text-align: center; /* Center align header text */
+}
+
+.listItemsHeader p {
+  margin: 0; /* Remove default margin */
+}
+
+.listItemsContent {
+  display: flex;
+  flex-direction: column; /* Column layout for items */
+  gap: 15px; /* Space between list items */
+}
+
+.listItemsContent > div {
+  display: grid; /* Grid layout for each item */
+  grid-template-columns: 1fr 2fr 2fr 1fr 1fr; /* Responsive column layout */
+  align-items: center; /* Center items vertically */
+  padding: 15px; /* Padding for item */
+  border: 1px solid #ddd; /* Light border for items */
+  border-radius: 8px; /* Rounded corners for items */
+  background-color: #fff; /* White background for items */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.listItemsContent > div:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+img {
+  max-width: 80px; /* Limit image size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for images */
+  display: block; /* Ensures images are centered in flex layout */
+  margin: 0 auto; /* Center image */
+}
+
+h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 18px; /* Font size for item names */
+  text-align: center; /* Center align item name */
+}
+
+p {
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center align description and price */
+}
+
+.listItemsActionSection {
+  display: flex; /* Flexbox for action buttons */
+  justify-content: center; /* Center buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+button {
+  padding: 8px 12px; /* Padding for buttons */
+  background: linear-gradient(
+    to bottom,
+    rgb(165, 248, 248),
+    rgb(239, 248, 248)
+  ); /* Primary button color */
+  /* color: white; White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .list {
+    width: 90%; /* Wider on smaller screens */
+  }
+
+  .listItemsHeader,
+  .listItemsContent > div {
+    grid-template-columns: 1fr 1fr; /* Change layout for smaller screens */
+  }
+
+  img {
+    max-width: 60px; /* Smaller image size for mobile */
+  }
+
+  h2 {
+    font-size: 16px; /* Smaller font size for names */
+  }
+
+  button {
+    padding: 6px 10px; /* Smaller padding for buttons */
+  }
+}

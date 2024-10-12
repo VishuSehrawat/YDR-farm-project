@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.appContent{
+  display: flex;
+  flex-direction: row;
+}
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth !important;
+}
+ 
+body{
+    background-color: aliceblue;
+    font-family: "Nunito Sans", sans-serif;
+}

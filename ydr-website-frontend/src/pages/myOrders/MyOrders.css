@@ -1,0 +1,83 @@
+.my-orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+h2 {
+    font-size: 2rem; /* Larger font for the heading */
+    margin-bottom: 20px;
+    color: rgb(60, 179, 113); /* Heading color */
+}
+
+.container {
+    display: grid; /* Use grid layout for orders */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between order items */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width for larger screens */
+}
+
+.my-orders-order {
+    background-color: white; /* White background for order cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    padding: 15px; /* Padding for order card */
+    text-align: center; /* Center text */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.my-orders-order:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.my-orders-order img {
+    width: 60px; /* Icon size */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.my-orders-order p {
+    margin: 5px 0; /* Vertical spacing for paragraphs */
+    font-size: 1rem; /* Standard font size */
+    color: #333; /* Dark color for text */
+}
+
+/* Status color coding */
+.my-orders-order p span {
+    color: #4caf50; /* Green dot for the status */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: rgb(60, 179, 113); /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Space above button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: rgb(50, 150, 95); /* Darker button color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+    }
+
+    .my-orders-order {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size for button */
+    }
+}

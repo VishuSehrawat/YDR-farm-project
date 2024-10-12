@@ -1,0 +1,98 @@
+.add {
+  width: 50%;
+  margin: auto; /* Center the form horizontally */
+  padding: 20px; /* Add padding around the form */
+  font-weight: 600;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(240, 248, 255, 0.9)
+  ); /* Soft gradient background */
+}
+
+.productImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Space below the image upload */
+}
+
+.productImage p {
+  margin-bottom: 5px; /* Space between text and image */
+}
+
+.productImage img {
+  height: 100px; /* Set a reasonable height for the upload area */
+  border: 2px dashed #a7c6d1; /* Dashed border for upload area */
+  border-radius: 10px; /* Rounded corners for image */
+  margin-bottom: 10px; /* Space between image and input */
+}
+
+.productName,
+.productDescription,
+.productOldPrice,
+.productNewPrice,
+.productDelivery {
+  position: relative; /* Position for absolute child elements */
+  margin-bottom: 20px; /* Space between input fields */
+}
+
+.productName label,
+.productDescription label,
+.productOldPrice label,
+.productNewPrice label,
+.productDelivery label {
+  position: absolute;
+  top: -10px; /* Position label above the input */
+  left: 10px; /* Position label to the left of the input */
+  background: white; /* Background color to cover the top border */
+  padding: 0 5px; /* Padding around the label */
+  font-size: 14px; /* Font size for labels */
+  color: #333; /* Color for labels */
+}
+
+/* Updated styles for input fields */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 12px 10px; /* Increased padding for comfort */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove outline on focus */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  font-family: 'Arial', sans-serif; /* Font family */
+  font-weight: 500; /* Font weight */
+  font-size: 16px; /* Font size */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.productSubmitButton {
+  width: 100%; /* Full width for the submit button */
+  padding: 12px; /* Padding for the button */
+  background: linear-gradient(45deg, #35a79c, #c2eef4); /* Gradient background */
+  color: white; /* White text color */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.productSubmitButton:hover {
+  background: linear-gradient(45deg, #2e8b76, #b0e0e6); /* Darker gradient on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .add {
+    width: 80%; /* Wider on smaller screens */
+  }
+}

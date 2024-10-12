@@ -1,0 +1,101 @@
+/* General styles for sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: url("../../assets/sidebarBackground1.jpg") center center no-repeat;
+  background-size: cover;
+  background-color: #a7c6d1; /* Light complementary background */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05); /* Soft shadow only on sides */
+  border-top: none; /* No top border */
+  transition: all 0.3s ease;
+}
+
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 18px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #e8f0f6; /* Light pastel blue for sidebar options */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #2d3748; /* Soft dark color for text */
+}
+
+.sidebar-option img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0.85); /* Slight dim for icons */
+}
+
+.sidebar-option p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sidebar-option:hover {
+  background-color: rgb(165, 248, 248); /* Soft pastel blue */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow on hover */
+}
+
+.sidebar-option.active {
+  background-color: #90cdf4; /* Active state color (light blue) */
+  color: white;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #aba9a9; /* Soft divider color */
+  margin: 20px 0;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px; /* Adjust width for small laptops */
+    padding: 18px; /* Slightly reduce padding */
+  }
+
+  .sidebar-option {
+    padding: 10px 16px; /* Slightly reduce padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust width for tablets */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .sidebar-option {
+    padding: 10px 12px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 180px; /* Adjust width for mobile */
+  }
+
+  .sidebar-option p {
+    font-size: 14px; /* Smaller font for mobile */
+  }
+
+  .sidebar-option img {
+    width: 20px;
+    height: 20px; /* Adjust icon size */
+  }
+}
