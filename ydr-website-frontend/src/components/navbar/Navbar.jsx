@@ -36,7 +36,7 @@ const Navbar = ({ setShowLogin }) => {
     const getProfile = async () => {
       if (token) {
         const result = await getUserProfile(token);
-        await setProfile(result);
+          setProfile(result);
       }  
      
 
